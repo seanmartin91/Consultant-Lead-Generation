@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lead Gen Tool — Sean Martin IT Sales</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="avatar">SM</div>
+      <div>
+        <h1>Lead generator</h1>
+        <p class="subtitle">IT sales · Niagara Falls, ON</p>
+      </div>
+    </header>
+
+    <section class="form-section">
+      <div class="row">
+        <div class="field">
+          <label for="industry">Target industry</label>
+          <select id="industry">
+            <option>Manufacturing</option>
+            <option>Professional services</option>
+            <option>Healthcare / medical</option>
+            <option>Construction & real estate</option>
+            <option>Financial services</option>
+            <option>Retail & distribution</option>
+            <option>Education</option>
+            <option>Non-profit</option>
+            <option>Any industry</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="size">Company size</label>
+          <select id="size">
+            <option>Small (10–50 employees)</option>
+            <option>Mid-market (50–250 employees)</option>
+            <option>Enterprise (250+ employees)</option>
+            <option>Any size</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="field">
+          <label for="role">Decision maker role</label>
+          <select id="role">
+            <option>IT Manager / Director</option>
+            <option>CEO / Owner</option>
+            <option>CFO / Finance Director</option>
+            <option>Operations Manager</option>
+            <option>Office Manager</option>
+            <option>CTO / VP Technology</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="geo">Geography</label>
+          <select id="geo">
+            <option>Ontario, Canada</option>
+            <option>Greater Toronto Area</option>
+            <option>Niagara / Hamilton region</option>
+            <option>Canada (national)</option>
+            <option>North America</option>
+          </select>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="pain">Pain point / what you're solving</label>
+        <select id="pain">
+          <option>Outdated IT infrastructure</option>
+          <option>Cybersecurity / compliance gaps</option>
+          <option>Cloud migration</option>
+          <option>Remote work / hybrid setup</option>
+          <option>Rising IT costs</option>
+          <option>No dedicated IT support</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="offer">Your offer / service (optional)</label>
+        <input type="text" id="offer" placeholder="e.g. IT procurement consulting, fractional sales, MSP referrals..." />
+      </div>
+
+      <div class="field">
+        <label for="count">Number of leads</label>
+        <select id="count">
+          <option value="3">3 leads</option>
+          <option value="5" selected>5 leads</option>
+          <option value="8">8 leads</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="apiKey">Anthropic API key</label>
+        <input type="password" id="apiKey" placeholder="sk-ant-..." />
+        <p class="hint">Your key is never stored — it's only used in-browser for API calls.</p>
+      </div>
+
+      <button class="gen-btn" onclick="generateLeads()">Generate leads with personalized outreach</button>
+    </section>
+
+    <div id="results"></div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
